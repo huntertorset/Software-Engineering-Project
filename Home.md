@@ -21,7 +21,7 @@ Precondition: The computer is turned on and has an active connection to a networ
 
 Steps:
 Open the Google Chrome Browser.
-From the browser, visit: https://www.google.com/fusiontables/data?docid=1RivYwP_8eYQ9xS0JpHrydFbYSEQ4lJ5ipss44_H_#rows:id=1. The browser should display:
+From the browser, visit: https://www.google.com/fusiontables/DataSource?docid=19DK7erAPFylgG9cCdJZg23CUo3kzIZYiy5Gpkvgf. The browser should display:
 
 
 
