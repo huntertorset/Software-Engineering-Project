@@ -1,14 +1,6 @@
 Product Name: When To Fly
 Team Members: Larisa Fossum, Dylan McShane, Hunter Torset
 
-Setup Information
-
-Visit the github repository for the project: https://github.com/huntertorset/Software-Engineering-Project.git
-Click on the button marked "Download zip" located in the bottom right corner of the repository page.
-Unzip the file, 'flightInfo-master.zip' downloaded in the previous step at a location of your choice. In the remainder of this test suite, the chosen location shall be referred to as ~.
-
-Tests
-
 Test Case Number: Z-0-00.
 
 Author: Larisa Fossum, Dylan McShane, Hunter Torset
