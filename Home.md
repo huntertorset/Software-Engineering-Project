@@ -25,6 +25,6 @@ From the browser, visit: https://www.google.com/fusiontables/DataSource?docid=19
 
 
 
-Postcondition: The browser displays the Google Fusion Table storing the data used for the product. Affirm that there are six columns of 300 rows of data. The first row is 2013, Q4, Boston, 491, $269, $240.  The above picture is not of the Google Fusion table. We have yet to input the data into it as of creating this test. However, the Fusion table will have the same data represented above.
+Postcondition: The browser displays the Google Fusion Table storing the data used for the product. Affirm that there are six columns of 268 rows of data. The first row is 2009, 1, Boston, 237, $214, $154.  The above picture is not of the Google Fusion table. We have yet to input the data into it as of creating this test. However, the Fusion table will have the same data represented above.
 
 
