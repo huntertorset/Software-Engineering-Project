@@ -26,3 +26,5 @@ Open the file titled “FlightData.html” in Google Chrome.
  
  
 Postcondition: The browser displays a website with a title, and a bar chart mockup with labels.
+               The website should look like this:
+![](http://i.imgur.com/pvsc5hb.jpg)
