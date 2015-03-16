@@ -15,14 +15,14 @@ Author: Larisa Fossum, Dylan McShane, Hunter Torset
  
 Name: "Is there a website?”
  
-Purpose: When successful, this test demonstrates that the user can reach the website and see a title, and a blank bar chart with no data.
+Purpose: When successful, this test demonstrates that the user can reach the website and see a title, and a mocked up bar chart.
  
 Precondition: The computer is turned on and has an active connection to a network. The Google Chrome Browser is installed on the computer.
  
 Steps:
 Open the Google Chrome Browser.
-Open the file titled “____” in Google Chrome.
+Open the file titled “FlightData.html” in Google Chrome.
  
  
  
-Postcondition: The browser displays a website with a title, and a bar chart with no data, but labels.
+Postcondition: The browser displays a website with a title, and a bar chart mockup with labels.
