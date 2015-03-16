@@ -11,7 +11,7 @@ We selected the cities listed in Figure 1.0 because they are some of the top des
 
 Visualization Requirements:
 
-![](https://lh4.googleusercontent.com/S0h7MIwF6ILrWnoZrAAYJfNNAc_TKN8T2gRRUkE5hImLuTxJsYZ1IXkRaBkJqrvUAR6eDzpgAngbC390KGHxOew1E8lirAmY=w1255-h481)
+![](https://docs.google.com/a/up.edu/file/d/0B57eSH7IgT1pMkNzaW1TYk5zOEFNc1NibmZGcjZ0RkN5bnNV/edit)
 
 Figure 1.0. A depiction of the final visualization. Users receive a visualized, quarterly summary of the number of passengers and price for flight between 2009 and 2013. 
 Depicted in Figure 1.0, the visualization will have three distinct features:
