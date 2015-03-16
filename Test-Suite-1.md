@@ -5,7 +5,7 @@ Setup Information
  
 1.      Visit the github repository for the project: https://github.com/huntertorset/Software-Engineering-Project.git
 2.     Click on the button marked "Download zip" located in the bottom right corner of the repository page.
-3.     Unzip the file, 'Software-Engineering-Project-master.zip' downloaded in the previous step at a location of your choice. In the remainder of this test suite, the chosen location shall be referred to as ~.
+3.     Unzip the file, 'Software-Engineering-Project-master.zip' downloaded in the previous step at a location of your choice.
  
 Tests
  
@@ -21,10 +21,11 @@ Precondition: The computer is turned on and has an active connection to a networ
  
 Steps:
 Open the Google Chrome Browser.
-Open the file titled “FlightData.html” in Google Chrome.
+Open the file titled “FlightData.html”, that is inside the downloaded zip file, in Google Chrome.
  
  
  
 Postcondition: The browser displays a website with a title, and a bar chart mockup with labels.
                The website should look like this:
+
 ![](http://i.imgur.com/pvsc5hb.jpg)
