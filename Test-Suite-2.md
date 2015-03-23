@@ -19,4 +19,4 @@ Precondition: The computer is turned on and has an active connection to a networ
 
 Steps: Open the Google Chrome Browser. Open the file titled “FlightData.html”, that is inside the downloaded zip file, in Google Chrome.
 
-Postcondition: The browser displays a website with a title, and a bar chart. The website should look like this:
+Postcondition: The browser displays a website with a title, and a bar chart with data from year 2009, for flights going to Boston.
