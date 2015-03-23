@@ -11,12 +11,12 @@ Test Case Number: D-1-02
 
 Author: Larisa Fossum, Dylan McShane, Hunter Torset
 
-Name: "   ”
+Name: "Is a chart visible?"
 
-Purpose: When successful, this test demonstrates that the user can reach the website and see a title, and a mocked up bar chart.
+Purpose: When successful, this test demonstrates that the user can reach the website and see a title, and the bar chart working for one city in one year.
 
 Precondition: The computer is turned on and has an active connection to a network. The Google Chrome Browser is installed on the computer.
 
 Steps: Open the Google Chrome Browser. Open the file titled “FlightData.html”, that is inside the downloaded zip file, in Google Chrome.
 
-Postcondition: The browser displays a website with a title, and a bar chart mockup with labels. The website should look like this:
+Postcondition: The browser displays a website with a title, and a bar chart. The website should look like this:
