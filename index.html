@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html ng-app="librs" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> 
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.js"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="js/chart.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+
+    <title>Flight Data</title>
+</head>
+
+    <body style="font-family: 'Open Sans', san-serif ; height: 100%; border: 0 none;">
+
+      <div class="container"  ng-controller="ButtonController">
+
+	<div class="row">
+	    <div class="col-md-12">
+					<h1 class="text-center">Flight information to and from Portland, OR (PDX)</h1>
+					<h3 class="text-center">Our team will look at data regarding flights outbound from Portland to a set number of destination cities around the United States. The data is a report of the average number of passengers and average cost of those flights. With this data visualized, it will be easier for consumers to see when the most popular travel times are, and what the corresponding average flight prices are for those times. This information will help someone find the least expensive and most desirable time to travel.</h3>
+			</div>
+	</div>
+
+	<div class="row" style="margin-top: 20px">
+	  <div class="col-md-3">
+	    <div class="input-group">
+	      <span class="input-group-btn">
+	        <input type="text" class="form-control" ng-model="year">
+ 		<button class="btn btn-default" type="button" ng-model="year" ng-disabled="year<2010" ng-click="minus()"><</button>
+		<button class="btn btn-default" type="button" ng-model="year" ng-disabled="year>2012" ng-click="plus()">></button>
+	      </span>
+	      </div><!-- /input-group -->
+	    </div>
+	  </div><!-- /.row -->
+	  
+
+     <div class="row">
+       <div class="cold-md-12">
+	 <div id="visualization_div" style="height: 400px; width: 700px;"></div>
+       </div>
+    </div>
+	 <div class="text-center">
+			<div class="col-md-2"></div> <!--spacing-->
+			<div class="col-md-8">
+				<button type="button" ng-click="setCityBoston()">Boston</button>
+				<button type="button" ng-click="setCityChicago()">Chicago</button>
+				<button type="button" ng-click="setCityDallas()">Dallas</button>
+				<button type="button" ng-click="setCityDenver()">Denver</button>
+				<button type="button" ng-click="setCityDetroit()">Detroit</button>
+				<button type="button" ng-click="setCityLosAngeles()">Los Angeles</button>
+				<button type="button" ng-click="setCityLasVegas()">Las Vegas</button>
+				<button type="button" ng-click="setCityNewYork()">New York</button>
+				<button type="button" ng-click="setCityOrlando()">Orlando</button>
+				<button type="button" ng-click="setCityPhoenix()">Phoenix</button>
+				<button type="button" ng-click="setCitySaltLakeCity()">Salt Lake City</button>
+				<button type="button" ng-click="setCitySanFrancisco()">San Francisco</button>
+				<button type="button" ng-click="setCitySeattle()">Seattle</button>
+				<button type="button" ng-click="setCityStLouis()">St. Louis</button>
+				<button type="button" ng-click="setCityWashington()">Washington D.C.</button>
+			</div>
+		</div>
+ 
+<!-- Begin footer content -->
+
+   <footer class="footer">
+			<div class="container">
+			<br><br><br><br>
+				<p class="text-muted">By members of group D1: Larisa Fossum, Dylan McShane, and Hunter Torset</p>
+				<p class="text-muted">For CS 441 Software Engineering</p>
+				<p class="text-muted">Taught by Dr. Tanya L. Crewnshaw of the University of Portland</p>
+				<p class="text-muted">Adapted from Dr. Crenshaw's "Library Sessions" code</p>
+			</div>
+	</footer>
+
+</body>
+</html>
