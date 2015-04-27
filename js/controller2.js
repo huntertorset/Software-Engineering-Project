@@ -11,7 +11,8 @@ var librs = angular.module('librs',[]);
 librs.controller('ButtonController', ['$scope', function($scope) {
 
 	    // Create the chart that will be used to animate year-by-year information.
-	    $scope.chart = new google.visualization.ColumnChart(document.getElementById('visualization_div'));	    
+	    $scope.chart = new google.visualization.ColumnChart(document.getElementById('visualization_div'));	
+		$scope.chart2 = new google.visualization.ColumnChart(document.getElementById('visualization_div2'));	
 
 	    // State the options here, since they are a bit cumbersome
 	    // to have inline in the JavaScript function.  This
@@ -31,8 +32,8 @@ librs.controller('ButtonController', ['$scope', function($scope) {
 			    },
 			    "bar": {"groupWidth": "95%"},
 			    "vAxis": {"title": "Cost ($)",
-				      "viewWindow" : {max : 550,
-									  min : 100}, 
+				      "viewWindow" : {max : 350,
+									  min : 110}, 
 				      "textStyle" : { color: "black",
 						      fontName: "Open Sans",
 						      fontSize: 12,
@@ -56,10 +57,51 @@ librs.controller('ButtonController', ['$scope', function($scope) {
 							   italic: false }},
 			    "legend": { "position": "none" }
 	    };
+		
+		var options2 = { "titleTextStyle": { color: "black",
+						fontName: "Open Sans",
+						fontSize: 16,
+						bold: false,
+						italic: false },
+			    "title":"Number of passengers from Portland",
+			    "titleFontSize": 12,
+			    "animation": {
+				startup: true,
+				duration: 850,
+				easing: 'in'
+			    },
+			    "bar": {"groupWidth": "95%"},
+			    "vAxis": {"title": "Number of passengers per day",
+				      "viewWindow" : {max : 3600,
+									  min : 0}, 
+				      "textStyle" : { color: "black",
+						      fontName: "Open Sans",
+						      fontSize: 12,
+						      bold: false,
+						      italic: false },
+				      "titleTextStyle" : { color: "black",
+							   fontName: "Open Sans",
+							   fontSize: 16,
+							   bold: false,
+							   italic: false }},    
+			    "hAxis": {"title": "Quarter",
+				      "textStyle" : { color: "black",
+						      fontName: "Open Sans",
+						      fontSize: 12,
+						      bold: false,
+						      italic: false },
+				      "titleTextStyle" : { color: "black",
+							   fontName: "Open Sans",
+							   fontSize: 16,
+							   bold: false,
+							   italic: false }},
+			    "legend": { "position": "none" }
+	    };
+		
 
 
 	    // Make the initial query to get the whole Fusion table.
-	    var query = "SELECT Year, Quarter, Destination, 'Average Price' FROM 1e2TwF1HSNgXBYaBYW57tLhE0Zw3xMtoeh_2oKv6K";
+	    var query = "SELECT Year, Quarter, Destination, Passengers, 'Average Price' FROM 1e2TwF1HSNgXBYaBYW57tLhE0Zw3xMtoeh_2oKv6K";
 
 	    var opts = {sendMethod: 'auto'};
 
@@ -75,6 +117,14 @@ librs.controller('ButtonController', ['$scope', function($scope) {
 		views[2011] = {};
 		views[2012] = {};
 		views[2013] = {};
+		
+		var data2;
+	    var views2 = {};
+        views2[2009] = {};
+		views2[2010] = {};
+		views2[2011] = {};
+		views2[2012] = {};
+		views2[2013] = {};
 		
 	    
 	    // Send the query and handle the response by creating and
@@ -94,10 +144,16 @@ librs.controller('ButtonController', ['$scope', function($scope) {
             views[thisYear][thisCity] = new google.visualization.DataView(data);
             views[thisYear][thisCity].setRows(views[thisYear][thisCity].getFilteredRows([{column: 0, value: thisYear}, {column: 2, value: thisCity}]));
                       
-		    views[thisYear][thisCity].setColumns([1, 3]);
+		    views[thisYear][thisCity].setColumns([1, 4]);
+			
+			views2[thisYear][thisCity] = new google.visualization.DataView(data);
+            views2[thisYear][thisCity].setRows(views2[thisYear][thisCity].getFilteredRows([{column: 0, value: thisYear}, {column: 2, value: thisCity}]));
+                      
+		    views2[thisYear][thisCity].setColumns([1, 3]);
 
-		    // Draw the chart for 2014.
+		    // Draw the chart for 2013.
 		    $scope.chart.draw(views[thisYear][thisCity].toDataTable(), options);
+			$scope.chart2.draw(views2[thisYear][thisCity].toDataTable(), options2);
                       
 		});	
 
@@ -128,11 +184,18 @@ librs.controller('ButtonController', ['$scope', function($scope) {
             views[thisYear][thisCity] = new google.visualization.DataView(data);
             views[thisYear][thisCity].setRows(views[thisYear][thisCity].getFilteredRows([{column: 0, value: thisYear}, {column: 2, value: thisCity}]));
                       
-		    views[thisYear][thisCity].setColumns([1, 3]);
+		    views[thisYear][thisCity].setColumns([1, 4]);
+			
+			views2[thisYear][thisCity] = new google.visualization.DataView(data);
+            views2[thisYear][thisCity].setRows(views2[thisYear][thisCity].getFilteredRows([{column: 0, value: thisYear}, {column: 2, value: thisCity}]));
+                      
+		    views2[thisYear][thisCity].setColumns([1, 3]);
+
  
 		}
 		// Draw the chart for selected year and city.
 		$scope.chart.draw(views[thisYear][thisCity].toDataTable(), options);
+		$scope.chart2.draw(views2[thisYear][thisCity].toDataTable(), options2);
 
 	    };
 

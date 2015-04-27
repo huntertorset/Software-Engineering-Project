@@ -8,12 +8,12 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.js"></script>
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>
     <script type="text/javascript" src="js/chart.js"></script>
-    <script type="text/javascript" src="js/controller.js"></script>
-
+    <script type="text/javascript" src="js/controller2.js"></script>
+ 
     <title>Flight Data</title>
 </head>
 
-    <body style="font-family: 'Open Sans', san-serif ; height: 100%; border: 0 none;">
+    <body style="font-family: 'Open Sans', san-serif ; height: 100%; border: 0 none;" background="Portland4.jpg"> <!-- Photo from: http://wallpapersmap.com/portland-skyline.html -->
 
       <div class="container"  ng-controller="ButtonController">
 
@@ -38,8 +38,12 @@
 	  
 
      <div class="row">
-       <div class="cold-md-12">
+       <div class="col-md-5">
 	 <div id="visualization_div" style="height: 400px; width: 700px;"></div>
+       </div>
+	   <div class="col-md-2"></div>
+	   <div class="col-md-5">
+	 <div id="visualization_div2" style="height: 400px; width: 700px;"></div>
        </div>
     </div>
 	 <div class="text-center">
@@ -68,10 +72,10 @@
    <footer class="footer">
 			<div class="container">
 			<br><br><br><br>
-				<p class="text-muted">By members of group D1: Larisa Fossum, Dylan McShane, and Hunter Torset</p>
-				<p class="text-muted">For CS 441 Software Engineering</p>
-				<p class="text-muted">Taught by Dr. Tanya L. Crewnshaw of the University of Portland</p>
-				<p class="text-muted">Adapted from Dr. Crenshaw's "Library Sessions" code</p>
+				<p>By members of group D1: Larisa Fossum, Dylan McShane, and Hunter Torset</p>
+				<p>For CS 441 Software Engineering</p>
+				<p>Taught by Dr. Tanya L. Crewnshaw of the University of Portland</p>
+				<p>Adapted from Dr. Crenshaw's "Library Sessions" code</p>
 			</div>
 	</footer>
 
